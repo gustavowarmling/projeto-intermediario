@@ -10,7 +10,6 @@ Aplicação desenvolvida para o projeto intermediário da disciplina de programa
   - Express.js
   - axios
   - node-html-parser
-  - nodemon
   - eslint,
   - prettier
 
