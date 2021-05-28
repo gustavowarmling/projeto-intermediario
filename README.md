@@ -2,6 +2,9 @@
 
 Aplicação desenvolvida para o projeto intermediário da disciplina de programação web.
 
+# URL para teste
+- https://projeto-intermediario-gustavo.herokuapp.com/
+
 # Tecnologias utilizadas
   - Node.JS
   - Express.js
