@@ -5,7 +5,6 @@
   "license": "MIT",
   "author": "@gustavowarmling",
   "scripts": {
-    "build": "tsc",
     "start": "nodemon src/server.js"
   },
   "engines": {
