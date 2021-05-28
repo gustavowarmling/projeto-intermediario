@@ -23,8 +23,8 @@ Aplicação desenvolvida para o projeto intermediário da disciplina de programa
     ```
   - Utilize as rotas no navegador e/ou Insomnia
     ```sh
-    /best-movies
     /popular-reviews
+    /100-artists
     ```
 
 # Rotas!
