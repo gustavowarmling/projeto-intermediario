@@ -34,6 +34,7 @@ Aplicação desenvolvida para o projeto intermediário da disciplina de programa
 
 **GET** /popular-reviews
   - Retorna uma lista de criticas populares do site https://letterboxd.com
+  - Query: film
   - ```sh
     {
       author: string;
@@ -45,6 +46,7 @@ Aplicação desenvolvida para o projeto intermediário da disciplina de programa
 
 **GET** /100-artists
   - Retorna a lista dos 100 artistas mais populares do momento segundo o site https://www.billboard.com/charts/artist-100
+  - Query: artist
   - ```sh
     {
       artist: string;
