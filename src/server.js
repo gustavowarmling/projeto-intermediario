@@ -1,6 +1,6 @@
 const app = require('./app');
 
-const PORT = 3333;
+const PORT = process.env.PORT || 3333;
 
 app.get('/', (req, res) => {
   res.send('Status: Online!');
