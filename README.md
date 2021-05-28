@@ -4,10 +4,10 @@ Aplicação desenvolvida para o projeto intermediário da disciplina de programa
 
 # Tecnologias utilizadas
   - Node.JS
-  - Typescript
   - Express.js
   - axios
   - node-html-parser
+  - nodemon
   - eslint,
   - prettier
 
