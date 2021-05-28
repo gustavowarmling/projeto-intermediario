@@ -1,18 +1,11 @@
 /* eslint-disable no-undef */
-import { Router } from 'express';
-import axios from 'axios';
-import { parse } from 'node-html-parser';
+const express = require("express");
+const axios = require('axios').default;
+const parse = require('node-html-parser').parse;
 
-const route = Router();
+const route = express.Router();
 
 const PAGE_ULR = 'https://letterboxd.com/';
-
-interface Review {
-  author: string;
-  film: string;
-  review: string;
-  timestamp: Date;
-}
 
 route.get('/', async (req, res) => {
   const query = req.query.film ? String(req.query.film) : false;
@@ -21,7 +14,7 @@ route.get('/', async (req, res) => {
   const root = parse(data);
   const reviewList = root.querySelectorAll('.film-detail');
 
-  const filmsReview: Review[] = [];
+  const filmsReview = [];
 
   reviewList.map(film => {
     const title = film.querySelector('.film-detail-content h2 a').innerHTML;
@@ -48,4 +41,4 @@ route.get('/', async (req, res) => {
   res.json(filmsReview);
 });
 
-export default route;
+module.exports = route;

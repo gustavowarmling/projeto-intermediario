@@ -1,18 +1,11 @@
 /* eslint-disable no-undef */
-import { Router } from 'express';
-import axios from 'axios';
-import { parse } from 'node-html-parser';
+const express = require("express");
+const axios = require('axios').default;
+const parse = require('node-html-parser').parse;
 
-const route = Router();
+const route = express.Router();
 
 const PAGE_ULR = 'https://www.billboard.com/charts/artist-100';
-
-interface Movie {
-  artist: string;
-  rank: string;
-  PeakPosition: string;
-  timestamp: Date;
-}
 
 route.get('/', async (req, res) => {
   const query = req.query.artist ? String(req.query.artist) : false;
@@ -21,7 +14,7 @@ route.get('/', async (req, res) => {
   const root = parse(data);
   const artistsList = root.querySelectorAll('.chart-list-item');
 
-  const artists: Movie[] = [];
+  const artists = [];
 
   artistsList.map(film => {
     const artist = film.attrs['data-title'];
@@ -49,4 +42,4 @@ route.get('/', async (req, res) => {
   res.json(artists);
 });
 
-export default route;
+module.exports = route;
